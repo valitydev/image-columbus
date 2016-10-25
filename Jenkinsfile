@@ -11,12 +11,12 @@ build('image-columbus', 'docker-host') {
   }
 
   pipeDefault() {
-    runStage('build postgres image') {
+    runStage('build image') {
       sh "make build_image"
     }
     try {
       if (env.BRANCH_NAME == 'master') {
-        runStage('push postgresimage') {
+        runStage('push image') {
           sh "make push_image"
         }
       }

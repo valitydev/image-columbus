@@ -1,0 +1,10 @@
+# general
+*~
+.tags*
+*.sublime-workspace
+.DS_Store
+.idea/*
+Dockerfile
+.containerpilot
+.containerpilot.tar.gz
+

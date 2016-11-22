@@ -3,10 +3,8 @@ cat <<EOF
 FROM $CUSTOM_BASE_IMAGE
 MAINTAINER Yevgeniy Poluektov <e.poluektov@rbkmoney.com>
 
-COPY geo_data/GeoLite2-city.mmdb /var/geodata/GeoLite2-city.mmdb
 COPY geo_data/GeoLite2-City-Locations-en.csv /var/geodata/GeoLite2-City-Locations-en.csv
 COPY geo_data/GeoLite2-City-Locations-ru.csv /var/geodata/GeoLite2-City-Locations-ru.csv
-VOLUME /var/geodata
 
 # A bit of magic below to get a proper branch name
 # even when the HEAD is detached (Hey Jenkins!
